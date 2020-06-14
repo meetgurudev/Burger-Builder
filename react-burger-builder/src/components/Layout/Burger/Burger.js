@@ -5,7 +5,7 @@ import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 
 const burger = (props) => {
     // Get the keys as array...
-    const tansformedIngredients = Object.keys(props.ingredients)
+    let transformedIngredients = Object.keys(props.ingredients)
         // Then get the value using maps
         .map(igKey => {
             // Make a new array with length of quantity.
@@ -14,11 +14,20 @@ const burger = (props) => {
                 // key is req, adajcent jsx elements...
                 return <BurgerIngredient key={igKey + i} type={igKey} />;
             });
-        })
+        }) // to trandform the array by flattening.
+        .reduce((prevElem, currentElem) => {
+            return prevElem.concat(currentElem)
+        }, []);
+
+    if (transformedIngredients.length === 0) {
+        transformedIngredients = <p>Please start adding Ingredients</p>
+    }
+
+    console.log(transformedIngredients);
     return (
         <div className={classes.Burger}>
             <BurgerIngredient type="bread-top" />
-            {tansformedIngredients}
+            {transformedIngredients}
             <BurgerIngredient type="bread-bottom" />
         </div>
     )
