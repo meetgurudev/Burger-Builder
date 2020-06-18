@@ -111,8 +111,6 @@ class BurgerBuilder extends Component {
 
     purchaseContinueHandler = () => {
 
-        // send data to backend here.
-        // Firebase needs .json as end points to name it as node.
         this.setState({ loading: true });
 
         const order = {
@@ -130,6 +128,8 @@ class BurgerBuilder extends Component {
             deliveryMethod: 'fastest'
         }
 
+        // send data to backend here.
+        // Firebase needs .json as end points to name it as node.
         axios.post('/orders.json', order)
             .then(res => {
                 this.setState({ loading: false, purchasing: false });
@@ -186,7 +186,9 @@ class BurgerBuilder extends Component {
 
         return (
             <Aux>
-                <Modal show={this.state.purchasing} modalClosed={this.purchaseCancellHandler}>
+                <Modal
+                    show={this.state.purchasing}
+                    modalClosed={this.purchaseCancellHandler}>
                     {orderSummary}
                 </Modal>
                 {burger}

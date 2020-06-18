@@ -9,6 +9,7 @@ import Backdrop from '../Backdrop/Backdrop';
 // ShouldComponentUpdate > return true.
 // React.memo > return false.
 // useMemo > uses a dependency array.
+// memo(Component: (props: any) => JSX.Element, propsAreEqual?: (prevProps: Readonly<any>, nextProps: Readonly<any>) => boolean): 
 
 const memoDependancyFunc = (prevProps, nextProps) => ((prevProps.show === nextProps.show) && (prevProps.children === nextProps.children));
 
@@ -33,5 +34,4 @@ const modal = props => {
     )
 }
 
-// memo(Component: (props: any) => JSX.Element, propsAreEqual?: (prevProps: Readonly<any>, nextProps: Readonly<any>) => boolean): 
 export default React.memo(modal, memoDependancyFunc);
