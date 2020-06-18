@@ -10,7 +10,7 @@ import Backdrop from '../Backdrop/Backdrop';
 // React.memo > return false.
 // useMemo > uses a dependency array.
 
-const memoDependancyFunc = (prevProps, nextProps) => nextProps.show === prevProps.show;
+const memoDependancyFunc = (prevProps, nextProps) => ((prevProps.show === nextProps.show) && (prevProps.children === nextProps.children));
 
 const modal = props => {
 
