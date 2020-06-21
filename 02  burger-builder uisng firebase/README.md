@@ -3,6 +3,7 @@ This version of learning involved in using Goggle Firebase Realtime database. Wh
 
 How to Use.
 Take the folder from the repo and navigate to folder path in cmd, then do the following commanands.
-
+```
 npm install --save
 npm start
+```
