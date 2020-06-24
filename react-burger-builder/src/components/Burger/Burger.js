@@ -4,6 +4,8 @@ import classes from './Burger.css'
 import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 
 const burger = (props) => {
+    console.log(props)
+
     // Get the keys as array...
     let transformedIngredients = Object.keys(props.ingredients)
         // Then get the value using maps

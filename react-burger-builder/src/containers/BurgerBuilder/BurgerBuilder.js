@@ -32,6 +32,8 @@ class BurgerBuilder extends Component {
     }
 
     componentDidMount() {
+
+        console.log(this.props)
         axios.get('ingredients.json')
             .then(reponse => {
                 this.setState({
@@ -111,33 +113,34 @@ class BurgerBuilder extends Component {
 
     purchaseContinueHandler = () => {
 
-        this.setState({ loading: true });
+        // this.setState({ loading: true });
 
-        const order = {
-            ingredients: this.state.ingredients,
-            price: this.state.totalPrice,
-            customer: {
-                name: 'Gurudev',
-                address: {
-                    street: 'Huston',
-                    zipCode: '53223',
-                    country: 'India'
-                },
-                email: 'hero@villain.com'
-            },
-            deliveryMethod: 'fastest'
-        }
+        // const order = {
+        //     ingredients: this.state.ingredients,
+        //     price: this.state.totalPrice,
+        //     customer: {
+        //         name: 'Gurudev',
+        //         address: {
+        //             street: 'Huston',
+        //             zipCode: '53223',
+        //             country: 'India'
+        //         },
+        //         email: 'hero@villain.com'
+        //     },
+        //     deliveryMethod: 'fastest'
+        // }
 
-        // send data to backend here.
-        // Firebase needs .json as end points to name it as node.
-        axios.post('/orders.json', order)
-            .then(res => {
-                this.setState({ loading: false, purchasing: false });
-                console.log(res)
-            }).catch(err => {
-                this.setState({ loading: false });
-                console.log(err)
-            });
+        // // send data to backend here.
+        // // Firebase needs .json as end points to name it as node.
+        // axios.post('/orders.json', order)
+        //     .then(res => {
+        //         this.setState({ loading: false, purchasing: false });
+        //         console.log(res)
+        //     }).catch(err => {
+        //         this.setState({ loading: false });
+        //         console.log(err)
+        //     });
+        this.props.history.push('/checkout');
     }
 
     render() {
