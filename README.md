@@ -15,3 +15,4 @@ npm start
 * Component Layout
 * Life cycles hooks
 * Ajax-http request using axios
+* Google Firebase Realtime Database
