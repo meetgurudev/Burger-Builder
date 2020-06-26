@@ -12,8 +12,9 @@ npm install --save
 npm start
 ```
 ### Concepts used
-* Component Layout
-* Life cycles hooks
-* Ajax-http request using axios
+* Component Layout.
+* Life cycles hooks.
+* Ajax-http request using axios.
 * Google Firebase Realtime Database
 * React Navigation.
+* React Forms.
