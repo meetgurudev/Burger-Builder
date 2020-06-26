@@ -14,4 +14,4 @@ npm start
 ### Concepts used
 * Component Layout
 * Life cycles hooks
-
+* Ajax-http request using axios
