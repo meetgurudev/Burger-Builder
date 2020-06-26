@@ -13,3 +13,5 @@ npm start
 ```
 ### Concepts used
 * Component Layout
+* Life cycles hooks
+
