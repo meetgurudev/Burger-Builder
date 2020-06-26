@@ -11,3 +11,5 @@ Take any folder from the repo and open, then do the following commanands.
 npm install --save
 npm start
 ```
+### Concepts used
+* Component Layout
