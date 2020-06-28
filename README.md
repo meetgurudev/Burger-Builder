@@ -11,3 +11,10 @@ Take any folder from the repo and open, then do the following commanands.
 npm install --save
 npm start
 ```
+### Concepts used
+* Component Layout.
+* Life cycles hooks.
+* Ajax-http request using axios.
+* Google Firebase Realtime Database
+* React Navigation.
+* React Forms.
