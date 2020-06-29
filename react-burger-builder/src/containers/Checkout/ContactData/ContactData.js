@@ -21,8 +21,8 @@ class ContactData extends Component {
 
         this.setState({ loading: true });
 
-        const order = {
-            ingredients: this.state.ingredients,
+        let order = {
+            ingredients: this.props.ingredients,
             price: this.props.price,
             customer: {
                 name: 'Gurudev',
@@ -35,7 +35,7 @@ class ContactData extends Component {
             },
             deliveryMethod: 'fastest'
         }
-
+        console.log("Contact Data:", order)
         // send data to backend here.
         // Firebase needs .json as end points to name it as node.
         axios.post('/orders.json', order)
