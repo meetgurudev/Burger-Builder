@@ -19,7 +19,7 @@ class Orders extends Component {
 
                 for (let key in res.data) {
                     fetchOrders.push({
-                        ...res.day[key],
+                        ...res.data[key],
                         id: key
                     });
                 }
@@ -32,11 +32,12 @@ class Orders extends Component {
 
 
     render() {
+        console.log(this.state.orders)
         return (
             <div>
-                {this.state.orders.map(order => {
+                {this.state.orders.map(order => (
                     <Order key={order.id} />
-                })}
+                ))}
             </div>
         );
     }
