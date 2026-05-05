@@ -69,7 +69,6 @@ class BurgerBuilder extends Component {
 
         const priceAddition = INGREDIENT_PRICES[type];
         const newPrice = this.state.totalPrice + priceAddition;
-        console.log(priceAddition, newPrice)
 
         this.setState({
             ingredients: updatedIngredients,
@@ -131,12 +130,10 @@ class BurgerBuilder extends Component {
         }
 
         axios.post('/orders.json', order)
-            .then(res => {
+            .then(() => {
                 this.setState({ loading: false, purchasing: false });
-                console.log(res)
-            }).catch(err => {
+            }).catch(() => {
                 this.setState({ loading: false });
-                console.log(err)
             });
     }
 
