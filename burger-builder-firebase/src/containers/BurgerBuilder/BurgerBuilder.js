@@ -16,6 +16,8 @@ const INGREDIENT_PRICES = {
     bacon: 75
 }
 
+const ALLOWED_INGREDIENT_TYPES = Object.keys(INGREDIENT_PRICES);
+
 class BurgerBuilder extends Component {
     // constructor(props) {
     //     super(props)
@@ -60,6 +62,9 @@ class BurgerBuilder extends Component {
     }
 
     addIngredientHandler = (type) => {
+        if (!ALLOWED_INGREDIENT_TYPES.includes(type)) {
+            return;
+        }
         const oldState = this.state.ingredients[type];
         const updatedCount = oldState + 1;
         const updatedIngredients = {
@@ -78,7 +83,9 @@ class BurgerBuilder extends Component {
     }
 
     removeIngredientHandler = (type) => {
-
+        if (!ALLOWED_INGREDIENT_TYPES.includes(type)) {
+            return;
+        }
         const oldState = this.state.ingredients[type];
         if (oldState <= 0) {
             return;
