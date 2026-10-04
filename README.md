@@ -1,3 +1,11 @@
+⚠️ **DEPRECATED - PROJECT ARCHIVED**
+
+This project is no longer maintained and is archived for historical reference only. It was created for learning purposes and is not actively developed or supported.
+
+**Please do not use this in production.** If you're looking for similar functionality, consider exploring modern React patterns or alternatives.
+
+---
+
 # Burger-Builder
 React based, mobile reponsive, application developed while learning React.
 
